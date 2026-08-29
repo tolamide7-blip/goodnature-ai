@@ -1,0 +1,2 @@
+Official Google guidance was consulted on August 28, 2026 before construction. Applied people-first content, truthful authorship, English-only presentation, no real ads, no dangerous mixtures and cautious household guidance. The 1000-word and image targets are project choices and do not guarantee AdSense approval. Placeholder visuals and domain URLs require manual replacement before publication.
+
