@@ -1,2 +1,3 @@
-User-agent: * Allow: / Sitemap: https://goodnature.ai/sitemap.xml
-
+User-agent: *
+Allow: /
+Sitemap: https://www.goodnature.ai/sitemap.xml
