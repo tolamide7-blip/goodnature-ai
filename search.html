@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Search | goodnature.ai</title>
+  <meta name="description" content="Search household cleaning and organization guides on goodnature.ai.">
+  <link rel="canonical" href="https://www.goodnature.ai/search.html">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <nav class="nav">
+    <a class="logo" href="/"><img class="brand-logo" src="images/logo/goodnature-ai-logo.webp" width="240" height="80" alt="GoodNature.ai logo"></a>
+    <a href="/">Home</a>
+    <a href="categories/kitchen.html">Kitchen</a>
+    <a href="categories/bathroom.html">Bathroom</a>
+    <a href="categories/eco-friendly.html">Eco-Friendly</a>
+    <a href="categories/organization.html">Organization</a>
+    <a href="categories/deep-cleaning.html">Deep Cleaning</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="container">
+    <article class="content">
+      <div class="eyebrow">Search</div>
+      <h1>Search GoodNature.ai</h1>
+      <p>Find practical, safe cleaning guides for your home in Austin, Texas and beyond.</p>
+
+      <div style="margin:24px 0;">
+        <input id="searchBox" type="search" placeholder="Search e.g. kitchen, bathroom, eco-friendly..." style="width:100%; padding:12px 16px; font-size:16px; border:1px solid #ccc; border-radius:8px;">
+      </div>
+
+      <div id="searchResults" style="margin-top:24px;">
+        <p style="color:#666;">Type to search our guides...</p>
+      </div>
+
+      <script>
+        // Simple client-side search placeholder - uses site index
+        const pages = [
+          {title: "Kitchen Cleaning", url: "categories/kitchen.html", desc: "Practical kitchen cleaning and degreasing guides"},
+          {title: "Bathroom Cleaning", url: "categories/bathroom.html", desc: "Bathroom disinfection without harsh chemicals"},
+          {title: "Eco-Friendly Cleaning", url: "categories/eco-friendly.html", desc: "Low-waste, safer choice cleaning methods"},
+          {title: "Organization", url: "categories/organization.html", desc: "Small home organization tips from Austin, TX"},
+          {title: "Deep Cleaning", url: "categories/deep-cleaning.html", desc: "Seasonal deep cleaning checklists"},
+          {title: "About Us", url: "about.html", desc: "Learn about goodnature.ai from Austin, Texas"},
+          {title: "Contact", url: "contact.html", desc: "Contact us at hello@idwol.com"},
+          {title: "Editorial Policy", url: "editorial-policy.html", desc: "How we create and review content"},
+          {title: "Author", url: "author.html", desc: "Meet the author"},
+        ];
+        const box = document.getElementById('searchBox');
+        const results = document.getElementById('searchResults');
+        box.addEventListener('input', () => {
+          const q = box.value.toLowerCase().trim();
+          if (!q) { results.innerHTML = '<p style="color:#666;">Type to search our guides...</p>'; return; }
+          const filtered = pages.filter(p => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q));
+          if (!filtered.length) { results.innerHTML = '<p>No results for "'+q+'". Try kitchen, bathroom, eco, etc.</p>'; return; }
+          results.innerHTML = filtered.map(p => `<div style="margin:12px 0; padding:12px; border:1px solid #eee; border-radius:8px;"><a href="${p.url}"><strong>${p.title}</strong></a><br><span style="color:#666;">${p.desc}</span></div>`).join('');
+        });
+      </script>
+
+      <p style="margin-top:40px; font-size:14px; color:#666;">Based in Austin, Texas, USA | Contact: <a href="mailto:hello@idwol.com">hello@idwol.com</a></p>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <strong>goodnature.ai</strong>
+      <p>Practical household cleaning and organization guidance in plain English.</p>
+      <p><a href="about.html">About</a> · <a href="editorial-policy.html">Editorial Policy</a> · <a href="corrections.html">Corrections</a> · <a href="contact.html">Contact</a> · <a href="privacy-policy.html">Privacy</a> · <a href="cookie-policy.html">Cookies</a> · <a href="terms-of-use.html">Terms</a> · <a href="legal-notice.html">Legal Notice</a> · <a href="author.html">Author</a></p>
+    </div>
+  </footer>
+</body>
+</html>
