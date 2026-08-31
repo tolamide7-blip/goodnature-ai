@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap - use www canonical version
+Sitemap: https://www.goodnature.ai/sitemap.xml
